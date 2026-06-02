@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  background: #e8f8fd;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1280px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 16px;
+}
+
+/* Logo */
+
+.logo img {
+  width: 60px;
+  object-fit: contain;
+}
+
+/* Location */
+
+.location-box {
+  width: 280px;
+  height: 48px;
+  background: white;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+}
+
+.location-box img {
+  width: 20px;
+}
+
+.location-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  background: transparent;
+}
+
+.arrow-icon {
+  width: 14px !important;
+  cursor: pointer;
+}
+
+/* Search */
+
+.search-box {
+  flex: 1;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  overflow: hidden;
+
+  background: white;
+}
+
+.search-box input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 15px;
+}
+
+.search-box button {
+  width: 60px;
+  height: 100%;
+  border: none;
+  background: #002f34;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box button img {
+  width: 22px;
+  filter: brightness(0) invert(1);
+}
+
+/* Right */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Login */
+
+.login-btn {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #002f34;
+  border-bottom: 2px solid #002f34;
+}
+
+.login-btn:hover {
+  border-bottom: none;
+}
+
+/* Sell */
+
+.sell-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sell-btn img {
+  width: 95px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  .location-box {
+    display: none;
+  }
+
+  .search-box {
+    width: 100%;
+    order: 3;
+  }
+
+  .header-right {
+    margin-left: auto;
+  }
+
+  .sell-btn img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 50px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+
+  .sell-btn img {
+    width: 70px;
+  }
+}

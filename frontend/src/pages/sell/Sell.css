@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+.sell-page {
+  min-height: 100vh;
+  background: #f2f4f5;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.sell-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.sell-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #002f34;
+  margin-bottom: 24px;
+}
+
+.sell-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sell-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #002f34;
+}
+.sell-label span { color: #e00; }
+
+.sell-input {
+  width: 100%;
+  height: 48px;
+  border: 1.5px solid #c1c3c4;
+  border-radius: 4px;
+  padding: 0 14px;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+  background: #fff;
+}
+.sell-input:focus { border-color: #002f34; }
+
+.sell-textarea {
+  height: 100px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+/* Image Upload */
+.sell-image-upload {
+  border: 2px dashed #c1c3c4;
+  border-radius: 8px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #888;
+  font-size: 14px;
+  gap: 8px;
+  transition: border-color 0.15s;
+  overflow: hidden;
+}
+.sell-image-upload:hover { border-color: #002f34; }
+.sell-upload-icon { font-size: 32px; }
+.sell-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sell-error {
+  font-size: 12px;
+  color: #e00;
+}
+
+.sell-btn {
+  background: #ffce32;
+  border: none;
+  border-radius: 4px;
+  height: 48px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #002f34;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 4px;
+}
+.sell-btn:hover { background: #f5c518; }
+
+/* Success */
+.sell-success {
+  min-height: 100vh;
+  background: #f2f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.sell-success-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 40px 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.sell-success-icon {
+  width: 64px;
+  height: 64px;
+  background: #002f34;
+  color: #ffce32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+.sell-success-card h2 { font-size: 20px; color: #002f34; }
+.sell-success-card p { font-size: 14px; color: #555; line-height: 1.6; }
+.sell-success-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  .sell-card { padding: 24px 16px; }
+}
