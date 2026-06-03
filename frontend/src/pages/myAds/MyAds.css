@@ -178,3 +178,159 @@
 .myad-edit-btn:hover {
   opacity: 0.9;
 }
+
+/* Spinner for Loading State */
+.myads-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 47, 52, 0.1);
+  border-left-color: #002f34;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px auto;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Empty State Container */
+.myads-empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 16px;
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f4f6f6 100%);
+  min-height: 50vh;
+}
+
+.myads-empty-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 47, 52, 0.06), 0 5px 15px rgba(0, 0, 0, 0.03);
+  padding: 48px 32px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(0, 47, 52, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.myads-empty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 47, 52, 0.1), 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.myads-empty-icon-wrap {
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+/* SVG Animations */
+.myads-empty-svg {
+  overflow: visible;
+}
+
+.floating-group {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.sparkle {
+  transform-origin: center;
+  animation: sparklePulse 2.5s ease-in-out infinite;
+}
+
+.sparkle-1 {
+  animation-delay: 0s;
+}
+
+.sparkle-2 {
+  animation-delay: 0.8s;
+}
+
+.sparkle-3 {
+  animation-delay: 1.6s;
+}
+
+@keyframes sparklePulse {
+  0%, 100% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.2) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+.dashed-card-rect {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+/* Typography & Info */
+.myads-empty-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #002f34;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.myads-empty-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #667e81;
+  margin: 0 0 32px 0;
+  padding: 0 10px;
+}
+
+/* CTA Button */
+.myads-empty-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffce32;
+  border: 3px solid #002f34;
+  color: #002f34;
+  font-size: 15px;
+  font-weight: 750;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 0px #002f34;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  outline: none;
+}
+
+.myads-empty-btn:hover {
+  background: #ffd659;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0px #002f34;
+}
+
+.myads-empty-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0px #002f34;
+}
+
+.myads-empty-btn span {
+  margin-top: -1px; /* Align text perfectly */
+}
+
+.btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.myads-empty-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
