@@ -61,12 +61,12 @@ export default function Login() {
 
       /* SAVE TOKEN */
 
+      localStorage.setItem('token', res.data.token);
+      login(res.data.user);
 
-    login(res.data.user);
+      alert(res.data.message);
 
-alert(res.data.message);
-
-navigate('/');
+      navigate('/');
 
       /* CLEAR INPUTS */
 

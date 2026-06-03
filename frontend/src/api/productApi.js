@@ -8,11 +8,12 @@ const API = axios.create({
 });
 
 export const createProduct = (data) => {
-  return API.post('/products', data, {
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem('token')}`,
-    },
-  });
+  const token = localStorage.getItem('token');
+  const headers = token
+    ? { Authorization: `Bearer ${token}` }
+    : {};
+
+  return API.post('/products', data, { headers });
 };
 
 export const getProductById = (id) => {
@@ -20,13 +21,10 @@ export const getProductById = (id) => {
 };
 
 export const updateProduct = (id, data) => {
-  return API.put(
-    `/products/${id}`,
-    data,
-    {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-    }
-  );
+  const token = localStorage.getItem('token');
+  const headers = token
+    ? { Authorization: `Bearer ${token}` }
+    : {};
+
+  return API.put(`/products/${id}`, data, { headers });
 };
