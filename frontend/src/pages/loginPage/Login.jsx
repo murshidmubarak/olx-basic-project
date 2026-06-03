@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Login.css';
 import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -14,8 +14,14 @@ import {
 
 export default function Login() {
 
-    const { login } = useAuth();
+  const { user, login } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate('/', { replace: true });
+    }
+  }, [user, navigate]);
 
   const [isRegister, setIsRegister] = useState(false);
   const [name, setName] = useState('');
@@ -66,7 +72,7 @@ export default function Login() {
 
       alert(res.data.message);
 
-      navigate('/');
+      navigate('/', { replace: true });
 
       /* CLEAR INPUTS */
 
